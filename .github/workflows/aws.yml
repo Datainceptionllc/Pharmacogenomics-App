@@ -92,3 +92,14 @@ jobs:
         service: ${{ env.ECS_SERVICE }}
         cluster: ${{ env.ECS_CLUSTER }}
         wait-for-service-stability: true
+    - name: ServiceNow CI/CD Install App
+  # You may pin to the exact commit or the version.
+  # uses: ServiceNow/sncicd-install-app@c2cd948de450aff560f8d2572255f758385996c7
+      uses: ServiceNow/sncicd-install-app@2.0.0
+          with:
+    # Application version to install
+    version: 
+    # Version of the base application on which to apply the customizations
+    baseAppVersion: # optional
+    # Only applicable if Application Customization is active and the associated application is a higher version than the currently installed version
+    autoUpgradeBaseApp: # optional 
